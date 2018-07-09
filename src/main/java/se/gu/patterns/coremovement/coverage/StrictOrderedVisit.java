@@ -1,6 +1,6 @@
 package se.gu.patterns.coremovement.coverage;
 
-import java.util.Set;
+import java.util.List;
 
 import com.google.common.base.Preconditions;
 
@@ -10,9 +10,9 @@ import se.gu.patterns.visitor.PatternVisitor;
 
 public class StrictOrderedVisit extends Pattern{
 	
-	private final Set<LTLPLAtom> atoms;
+	private final List<LTLPLAtom> atoms;
 	
-	public StrictOrderedVisit(Set<LTLPLAtom> atoms) {
+	public StrictOrderedVisit(List<LTLPLAtom> atoms) {
 		Preconditions.checkNotNull(atoms, "The set of locations to be visited cannot be null");
 		
 		Preconditions.checkArgument(atoms.size()>0, "At least a location muse be present to create the visit pattern");
@@ -32,7 +32,7 @@ public class StrictOrderedVisit extends Pattern{
 	/**
 	 * @return the atoms
 	 */
-	public Set<LTLPLAtom> getAtoms() {
+	public List<LTLPLAtom> getAtoms() {
 		return atoms;
 	}
 
