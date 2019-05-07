@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.gu</groupId>
@@ -104,7 +103,7 @@
 								<include>**/*</include>
 							</includes>
 							<repositoryName>Patterns</repositoryName>      <!-- github repo name -->
-							<repositoryOwner>claudiomenghi</repositoryOwner>    <!-- github username -->
+							<repositoryOwner>SergioGarG</repositoryOwner>    <!-- github username -->
 						</configuration>
 						<goals>
 							<goal>site</goal>
@@ -116,7 +115,7 @@
 
 						<configuration>
 							<repositoryName>Patterns</repositoryName>      <!-- github repo name -->
-							<repositoryOwner>claudiomenghi</repositoryOwner>    <!-- github username -->
+							<repositoryOwner>SergioGarG</repositoryOwner>    <!-- github username -->
 							<merge>true</merge>
 							<path>${javadoc.path}</path>
 							<!-- <path>${project.artifactId}</path> -->
@@ -151,16 +150,6 @@
 
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<id>Patterns-mvn-repo</id>
-			<url>https://raw.github.com/claudiomenghi/Patterns/mvn-repo/</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
 
 	<distributionManagement>
 		<repository>
@@ -168,13 +157,23 @@
 			<name>Temporary Staging Repository</name>
 			<url>file://${project.build.directory}/mvn-repo</url>
 		</repository>
-
 		<site>
 			<id>github-pages-site</id>
 			<name>Deployment through GitHub's site deployment plugin</name>
 			<url></url>
 		</site>
 	</distributionManagement>
+	
+	<repositories>
+		<repository>
+			<id>LTL-mvn-repo</id>
+			<url>https://raw.github.com/SergioGarG/LTL/mvn-repo/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
 
 
 </project>
